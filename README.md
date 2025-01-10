@@ -30,21 +30,26 @@ I use this tool combined with [UpSnap](https://github.com/seriousm4x/UpSnap) for
 
 ## Adding the Command to Startup on Windows
 
-To run `shutdown-on-lan` automatically at startup on Windows, follow these steps:
+To run `shutdown-on-lan` automatically at startup on Windows without opening a terminal, follow these steps:
 
-1. Create a shortcut:
-    - Right-click on your desktop or in a folder and select `New > Shortcut`.
-    - In the location field, enter:
-      ```sh
-      cmd /c "shutdown-on-lan --<PORT> --<MESSAGGE>"
+1. Create a batch file:
+    - Open a text editor and paste the following content:
+      ```batch
+      @echo off
+      start "" /B pythonw -m shutdown_on_lan.main
       ```
-    - Click `Next` and give the shortcut a name, e.g., `Shutdown On Lan`.
+    - Save the file as `shutdown-on-lan.bat`.
 
-2. Move the shortcut to the Startup folder:
+2. Create a shortcut:
+    - Right-click on your desktop or in a folder and select `New > Shortcut`.
+    - In the location field, enter the path to the `shutdown-on-lan.bat` file.
+    - Click `Next` and give the shortcut the name `shutdown-on-lan`.
+
+3. Move the shortcut to the Startup folder:
     - Press `Win + R`, type `shell:startup`, and press `Enter`.
     - Move the shortcut you created into the Startup folder.
 
-Now, `shutdown-on-lan` will run automatically when you log in to Windows.
+This will run `shutdown-on-lan` in the background without opening a terminal and add an icon to the system tray. You can quit the application by right-clicking the tray icon and selecting "Quit".
 
 ## Arguments
 
