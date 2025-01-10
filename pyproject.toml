@@ -9,6 +9,8 @@ license = "GPL-3.0-or-later"
 [tool.poetry.dependencies]
 python = "^3.12"
 fastapi = {extras = ["standard"], version = "^0.115.6"}
+pystray = "^0.19.5"
+pillow = "^11.1.0"
 
 [tool.poetry.scripts]
 shutdown-on-lan = "shutdown_on_lan.main:main"
