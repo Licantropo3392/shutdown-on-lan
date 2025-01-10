@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "shutdown-on-lan"
+version = "0.0.3"
+description = "Shutdown On Lan is a FastAPI application that allows you to remotely shut down the system."
+authors = ["Licantropo3392 <denisalbu287@gmail.com>"]
+readme = "README.md"
+license = "GPL-3.0-or-later"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["standard"], version = "^0.115.6"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
