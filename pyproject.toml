@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "shutdown-on-lan"
-version = "1.0.0a0"
+version = "1.0.0"
 description = "Shutdown On Lan is a FastAPI application that allows you to remotely shut down the system."
 authors = ["Licantropo3392 <denisalbu287@gmail.com>"]
 readme = "README.md"
