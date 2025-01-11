@@ -26,6 +26,9 @@ def main() -> None:
     server_thread = threading.Thread(target=Server, args=(app, args))
     server_thread.start()
 
+    with open("server.log", "w") as logFile:
+        logFile.write("")
+
     Tray.Init()
 
 if __name__ == "__main__":
