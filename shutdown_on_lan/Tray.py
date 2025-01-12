@@ -16,6 +16,7 @@ def Init() -> None:
         tray.icon = Image.open("assets/python.png")
     except FileNotFoundError:
         tray.icon = CreateImage()
+        
     tray.menu = pystray.Menu(
         pystray.MenuItem("Show Logs", ShowLogs),
         pystray.MenuItem("Quit", OnQuit)
