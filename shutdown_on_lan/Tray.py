@@ -11,11 +11,7 @@ def Init() -> None:
     """ Create the system tray icon """
 
     tray = pystray.Icon("shutdown-on-lan")
-
-    try:
-        tray.icon = Image.open("assets/python.png")
-    except FileNotFoundError:
-        tray.icon = CreateImage()
+    tray.icon = CreateImage()
         
     tray.menu = pystray.Menu(
         pystray.MenuItem("Show Logs", ShowLogs),
