@@ -4,6 +4,7 @@ import threading
 import time
 from PIL import Image, ImageTk
 import customtkinter as tk
+from shutdown_on_lan.CreateImage import CreateImage
 from shutdown_on_lan.CtkScrollableTextDisabled import CtkScrollableTextDisabled
 
 def Init() -> None:
@@ -11,7 +12,10 @@ def Init() -> None:
 
     tray = pystray.Icon("shutdown-on-lan")
 
-    tray.icon = Image.open("python.png")
+    try:
+        tray.icon = Image.open("assets/python.png")
+    except FileNotFoundError:
+        tray.icon = CreateImage()
     tray.menu = pystray.Menu(
         pystray.MenuItem("Show Logs", ShowLogs),
         pystray.MenuItem("Quit", OnQuit)
