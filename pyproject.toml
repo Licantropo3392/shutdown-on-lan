@@ -19,3 +19,6 @@ shutdown-on-lan = "shutdown_on_lan.Main:main"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.include]
+shutdown_on_lan/assets/* = "shutdown_on_lan/assets/*"
