@@ -8,5 +8,6 @@ def init() -> argparse.Namespace:
     parser.add_argument("--port", type=int, default=8000, help="Port to run the FastAPI app on (default: 8000)")
     parser.add_argument("--message", type=str, default="The system will shut down in 5 seconds", help="Shutdown message (default: The system will shut down in 5 seconds)")
     parser.add_argument("--hide-message", action='store_true', help="Hide shutdown message if specified")
-    
+    parser.add_argument("--time", type=int, default=5, help="Time in seconds before the system shuts down (default: 5)")
+
     return parser.parse_args()
