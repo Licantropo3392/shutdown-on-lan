@@ -2,7 +2,6 @@ import os
 import pystray
 import threading
 import time
-from PIL import Image, ImageTk
 import customtkinter as tk
 from shutdown_on_lan.CreateImage import CreateImage
 from shutdown_on_lan.CtkScrollableTextDisabled import CtkScrollableTextDisabled
